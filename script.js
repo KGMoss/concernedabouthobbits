@@ -5,7 +5,7 @@ let thisTrack;
 let prevDuration;
 let prevResponse;
 var svg = d3.select("svg")
-            .attr("width", window.innerWidth)
+            .attr("width", "20%")
             .attr("height", height)
             .attr("overflow", "visible")
             
@@ -295,24 +295,10 @@ var trackBox = div.selectAll("div").selectAll("div")
             })
         
 
-
-
-//i feel like i need to use the previous duration to set the y value of these guys, but idk how
-
 var tooltip = d3.select('div')
         .append("div")
         .attr("class", "tooltip")
         .html("<h3> Hover over a bubble to view info about a theme! </h3>")
-
-// function highlightSimilar(myData)
-// {
-//     d3.select(dataviz)
-//         if (d.theme == thisThemeCategory)
-//         {
-//             d3.select.this.attr("class", "highlighted")
-//         }
-// }
-
               
 var dataviz= svg.selectAll("circle")
                 .data(myData).enter()
@@ -353,9 +339,6 @@ var dataviz= svg.selectAll("circle")
                         let yVal = (d.endtime+d.starttime)/2
                          return yVal*1.5+30;
                 })
-                // .attr("fill", function(d) {
-                //     return d.color
-                // })
                 .attr("fill", function (d) {
                     if (d.themecategory == "The One Ring")
                     {
@@ -532,31 +515,3 @@ let centerLine =
         .classed("highlighted", false);
 
 console.log(trackBox.parentElement)
-
-
-
-// var scroller = scrollama();
-
-// function handleStepEnter(response)
-// {
-//     console.log(response)
-//     console.log("enter")
-//     // response.element.style.opacity=1
-// }
-
-// function handleStepExit(response)
-// {
-//     console.log(response.direction + "Dir")
-//    if (response.direction == 'up')
-//    {
-//     console.log("here")
-//     // response.element.style.opacity=0
-//    }
-// }
-
-// scroller.setup({
-//     step: ".trackBox",
-//     offset: 0.67,
-// })
-// .onStepEnter(handleStepEnter)
-// .onStepExit(handleStepExit)
