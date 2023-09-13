@@ -29,7 +29,7 @@ var trackBox = div.selectAll("div").selectAll("div")
             d3.select(this)
             .append("p")
             .attr("class", "trackText")
-            .html("The first theme heard in the trilogy is Lothlórien, immediately connecting the audience to the history of Middle-Earth and the One Ring. While Galadriel's narration gives us the history of the Ring's journey, Shore's thematic scoring gives us a glimpse of the journey ahead.")
+            .html("The first theme heard in the trilogy is <i>Lothlórien</i>, immediately connecting the audience to the history of Middle-Earth and the One Ring. While Galadriel's narration gives us the history of the Ring's journey, Shore's thematic scoring gives us a glimpse of the journey ahead.")
         }
         if (thisTrack == "The Shire")
         {
