@@ -105,11 +105,7 @@ p
     font-size:.8em;
 }
 
-.svg
-{
-    left: 50%;
-     /* overflow: visible;  */
-}
+
 
 .tooltip
 {
@@ -241,4 +237,52 @@ footer
 .subtitle
 {
     padding-bottom:.5em;
+}
+
+.mobileScreen
+{
+    opacity:0;
+}
+
+@media only screen and (max-width: 600px) 
+{
+   svg
+   {
+    margin-left:25%;
+   }
+    .tooltip
+    {
+        position:fixed;
+        top:55%;
+        left:1em;
+        height:5em;
+        width:15em;
+        margin-right: 4em;
+        opacity:.7;
+    }
+
+    .trackBox
+    {
+        left:1em;
+        width: 15em;
+        font-size:80%;
+    }
+
+    .introText, .mainTitle
+    {
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .longText
+    {
+        width:100%;
+        margin-left:0;
+    }
+
+    li a
+    {
+        padding:.5em;
+        font-size:95%;
+    }
 }
